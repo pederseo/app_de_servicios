@@ -1,0 +1,66 @@
+/* Pie de Página */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px 40px;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: var(--tamano-subtitulo);
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--tamano-parrafo);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: var(--color-hover);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .footer-language-currency {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--tamano-parrafo);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: var(--color-hover);
+  }
+  

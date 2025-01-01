@@ -1,0 +1,36 @@
+.proveedores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Distribuir las tarjetas de manera flexible */
+  gap: 20px;  /* Espacio entre las tarjetas */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para cada tarjeta de proveedor */
+.proveedor-card {
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidad */
+  overflow: hidden;  /* Asegura que el contenido no se desborde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transición para el hover */
+  padding-bottom: 10px;
+}
+
+.proveedor-card:hover {
+  transform: translateY(-5px);  /* Levanta la tarjeta cuando el mouse pasa por encima */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);  /* Sombra más intensa en hover */
+}
+
+/* Imagen de la tarjeta */
+.proveedor-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  /* Hace que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+/* Responsive: Ajustar las tarjetas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .proveedores {
+    grid-template-columns: 1fr;  /* En pantallas más pequeñas, mostrar una tarjeta por fila */
+  }
+}

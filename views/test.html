@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animación Rive</title>
+</head>
+<body>
+  <!-- Contenedor donde se mostrará la animación -->
+  <canvas id="riveCanvas" width="500" height="500"></canvas>
+
+  <!-- Script de Rive -->
+  <script src="https://unpkg.com/@rive-app/canvas@2.6.0"></script>
+  <script>
+    // Crear un objeto Rive
+    const r = new rive.Rive({
+      src: 'mi_animacion.riv', // Ruta al archivo .riv
+      canvas: document.getElementById('riveCanvas'), // Enlace al elemento canvas
+      autoplay: true, // Reproduce automáticamente
+    });
+  </script>
+</body>
+</html>

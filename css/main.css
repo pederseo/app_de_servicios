@@ -1,0 +1,86 @@
+@import url('nav.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('proveedores.css');
+
+
+/* Variables Globales */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #2ecc71;
+    --color-texto: #333; 
+    --color-fondo: #f8f9fa; 
+    --color-hover: #2980b9;
+  
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-secundaria: 'Roboto', sans-serif;
+  
+    --tamano-texto-base: 16px;
+    --tamano-titulo: 24px;
+    --tamano-subtitulo: 20px;
+    --tamano-parrafo: 14px;
+  }
+  
+  /* Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-texto-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+  }
+  
+  /* Títulos */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-secundaria);
+    margin-bottom: 0.5em;
+  }
+  
+  h1 { font-size: var(--tamano-titulo); }
+  h2 { font-size: var(--tamano-subtitulo); }
+  
+  /* Enlaces */
+  a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--color-hover);
+  }
+  
+  /* Botones */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-primario);
+    color: white;
+    font-size: var(--tamano-parrafo);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--color-hover);
+  }
+  
+  /* Contenedores */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Espaciado */
+  section {
+    margin-bottom: 40px;
+  }
+  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenido - Proveedores y Servicios</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+  <!-- Barra de Navegación -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Sección principal -->
+  <section class="main-content">
+    <h1>Encuentra los mejores proveedores para tus necesidades</h1>
+    <p>Accede a una lista de proveedores verificados y servicios en diversas categorías.</p>
+
+    <!-- Botón que redirige a la página de proveedores -->
+    <a href="proveedores.html" class="cta-button">Ver Proveedores</a>
+  </section>
+
+  <!-- Pie de Página -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Cargar barra de navegación desde un archivo externo
+    fetch('../components/nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    // Cargar pie de página desde un archivo externo
+    fetch('../components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
