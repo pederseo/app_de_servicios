@@ -22,14 +22,14 @@
     padding: 10px;
     font-size: var(--tamano-parrafo);
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 300px;
   }
   
   #main-header button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+
     cursor: pointer;
     background-color: var(--color-primario);
     color: white;

@@ -18,10 +18,10 @@ nav {
   
   /* Menú */
   nav .menu {
-    display: flex;
+
     gap: 20px;
     justify-content: center;
-    flex-grow: 1;
+
   }
   
   nav .menu a {
