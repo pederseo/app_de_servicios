@@ -1,31 +1,24 @@
 # Changelog
 
-Todas las modificaciones importantes de este proyecto serán documentadas en este archivo.
-
-El formato sigue las convenciones de [Keep a Changelog](https://keepachangelog.com/es/1.0.0/) y [Semantic Versioning](https://semver.org/lang/es/).
-
-## [1.0.0] - 2024-10-23
+## 2024-12-25
 ### Añadido
 - Página principal con diseño responsivo utilizando CSS Grid y Flexbox.
-- Sistema de navegación con enlaces a "Inicio", "Acerca de" y "Contacto".
-- Componentes reutilizables creados con React.
-- Integración de Tailwind CSS para el diseño.
-- Animaciones básicas con CSS para botones y transiciones.
-- Formulario de contacto funcional con validación en tiempo real.
+- Sistema de navegación con enlaces.
+- Componentes reutilizables.
 
 ### Cambiado
-- Estilos generales optimizados para dispositivos móviles.
+- Estilos globales en main.css.
 
 ### Eliminado
-- Dependencias innecesarias para reducir el tamaño del paquete.
+- Dependencias innecesarias.
 
-## [0.9.0] - 2024-10-15
+## 2024-12-27
 ### Añadido
-- Configuración inicial del proyecto con Vite y React.
-- Configuración de ESLint y Prettier para estandarizar el código.
-- Instalación de dependencias esenciales como React Router y Axios.
-- Prototipo del diseño de la página principal.
+- Prototipo del diseño de la página principal subido a github pages.
 
----
+## 2024-01-02
+### actualizado
+
+- Actualizacion de los ultimos cambios para la entrega
 
 **Nota**: Este archivo seguirá actualizándose conforme el proyecto avance.

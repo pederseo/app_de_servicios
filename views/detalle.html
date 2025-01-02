@@ -7,48 +7,61 @@
     <link rel="stylesheet" href="../css/main.css">
     <style>
       /* Estilos para la sección de detalles del proveedor */
-.detalle-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  text-align: center;
-}
+      .detalle-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: center;
+      }
 
-.detalle-card img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
+      .detalle-card img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
 
-.detalle-card h2 {
-  color: var(--color-primario);
-  margin-bottom: 10px;
-}
+      .detalle-card h2 {
+        color: var(--color-primario);
+        margin-bottom: 10px;
+      }
 
-.detalle-card p {
-  font-size: var(--tamano-parrafo);
-  margin-bottom: 10px;
-}
+      .detalle-card p {
+        font-size: var(--tamano-parrafo);
+        margin-bottom: 10px;
+      }
 
-.detalle-card a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: var(--color-secundario);
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+      .detalle-card a {
+        color: black;
+      }
 
-.detalle-card a:hover {
-  background-color: var(--color-hover);
-}
+      /* Estilo para los botones */
+      .detalle-botones {
+        display: flex; /* Los alinea en fila */
+        justify-content: center; /* Centra horizontalmente */
+        gap: 10px; /* Espacio entre botones */
+      }
+
+      .detalle-button {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: var(--tamano-parrafo);
+        color: white !important;
+        background-color: var(--color-primario);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+      }
+
+      .detalle-button:hover {
+        background-color: var(--color-hover);
+      }
 
     </style>
 </head>
@@ -102,7 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>Teléfono:</strong> <a href="tel:${proveedor.telefono}">${proveedor.telefono}</a></p>
             <p><strong>Dirección:</strong> ${proveedor.direccion}</p>
             <p><strong>Página web:</strong> <a href="${proveedor.pagina_web}" target="_blank">Visitar sitio web</a></p>
-            <a href="index.html">Volver</a>
+            <!-- Botones alineados -->
+            <div class="detalle-botones">
+              <a href="../views/proveedores.html" class="detalle-button">Volver</a>
+              <a href="index.html" class="detalle-button">Contactar</a>
+            </div>
           </div>
         `;
       } else {
