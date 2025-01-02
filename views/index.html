@@ -26,20 +26,8 @@
   <!-- Pie de página -->
   <div id="footer-placeholder"></div>
 
-  <script>
-    // Cargar barra de navegación desde un archivo externo
-    fetch('../components/nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
+  <!-- cargar componentes -->
+  <script src="../js/index.js"></script>
 
-    // Cargar pie de página desde un archivo externo
-    fetch('../components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
 </body>
 </html>

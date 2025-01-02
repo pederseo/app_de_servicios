@@ -5,65 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Proveedor</title>
     <link rel="stylesheet" href="../css/main.css">
-    <style>
-      /* Estilos para la sección de detalles del proveedor */
-      .detalle-card {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        text-align: center;
-      }
 
-      .detalle-card img {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 15px;
-      }
-
-      .detalle-card h2 {
-        color: var(--color-primario);
-        margin-bottom: 10px;
-      }
-
-      .detalle-card p {
-        font-size: var(--tamano-parrafo);
-        margin-bottom: 10px;
-      }
-
-      .detalle-card a {
-        color: black;
-      }
-
-      /* Estilo para los botones */
-      .detalle-botones {
-        display: flex; /* Los alinea en fila */
-        justify-content: center; /* Centra horizontalmente */
-        gap: 10px; /* Espacio entre botones */
-      }
-
-      .detalle-button {
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: var(--tamano-parrafo);
-        color: white !important;
-        background-color: var(--color-primario);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        display: inline-block;
-      }
-
-      .detalle-button:hover {
-        background-color: var(--color-hover);
-      }
-
-    </style>
 </head>
 <body>
 
@@ -76,59 +18,8 @@
 <!-- Pie de página -->
 <div id="footer-placeholder"></div>
 
-<script>
-// Cargar la barra de navegación
-fetch('../components/nav.html')
-.then(response => response.text())
-.then(data => {
-  document.getElementById('nav-placeholder').innerHTML = data;
-});
-
-// Cargar el pie de página
-fetch('../components/footer.html')
-.then(response => response.text())
-.then(data => {
-  document.getElementById('footer-placeholder').innerHTML = data;
-});
-
-// Mostrar los detalles del proveedor
-document.addEventListener("DOMContentLoaded", () => {
-  // Obtener el ID desde la URL
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-
-  fetch("../proveedores.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const proveedor = data.find((item) => item.id == id);
-
-      if (proveedor) {
-        document.getElementById("detalle").innerHTML = `
-          <div class="detalle-card">
-            <img src="${proveedor.imagen}" alt="${proveedor.nombre}" />
-            <h2>${proveedor.nombre}</h2>
-            <p>${proveedor.descripcion}</p>
-            <p><strong>Calificación:</strong> ${proveedor.calificacion} ⭐ (${proveedor.reseñas} reseñas)</p>
-            <p><strong>Categoría:</strong> ${proveedor.categoria}</p>
-            <p><strong>Disponibilidad:</strong> ${proveedor.disponibilidad}</p>
-            <p><strong>Email:</strong> <a href="mailto:${proveedor.email}">${proveedor.email}</a></p>
-            <p><strong>Teléfono:</strong> <a href="tel:${proveedor.telefono}">${proveedor.telefono}</a></p>
-            <p><strong>Dirección:</strong> ${proveedor.direccion}</p>
-            <p><strong>Página web:</strong> <a href="${proveedor.pagina_web}" target="_blank">Visitar sitio web</a></p>
-            <!-- Botones alineados -->
-            <div class="detalle-botones">
-              <a href="../views/proveedores.html" class="detalle-button">Volver</a>
-              <a href="index.html" class="detalle-button">Contactar</a>
-            </div>
-          </div>
-        `;
-      } else {
-        document.getElementById("detalle").innerHTML = "<p>Proveedor no encontrado.</p>";
-      }
-    })
-    .catch((error) => console.error("Error cargando detalle:", error));
-});
-</script>
+<!-- cargar datos con el id -->
+<script src="../js/detalles.js"></script>
 
 </body>
 </html>
