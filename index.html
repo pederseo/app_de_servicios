@@ -1,47 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bienvenido - Proveedores y Servicios</title>
-  <link rel="stylesheet" href="./css/main.css" />
+  <title>Hero Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo img {
+    padding-top: 6px;
+    height: 60px; /* Ajusta el tamaño según necesites */
+    width: auto;  /* Mantiene la proporción de la imagen */
+  }
+
+    .hero {
+      position: relative;
+      background: url('https://blog.interfell.com/hubfs/como%20crear%20un%20equipo%20de%20trabajo%20fuerte%20y%20estable.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    .content {
+      position: relative;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: #f43f5e;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .link-primary, .link-secondary {
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .link-primary {
+      background-color: #f43f5e;
+      color: white;
+    }
+
+    .link-primary:hover {
+      background-color: #e11d48;
+    }
+
+    .link-secondary {
+      background-color: white;
+      color: #f43f5e;
+    }
+
+    .link-secondary:hover {
+      color: #e11d48;
+    }
+  </style>
 </head>
 <body>
-  <!-- Barra de Navegación -->
-  <div id="nav-placeholder"></div>
+  <section class="hero">
+    <div class="overlay"></div>
 
-  <!-- Sección principal -->
-  <section class="main-content">
-    <h1>Encuentra los mejores proveedores para tus necesidades</h1>
-    <p>Accede a una lista de proveedores verificados y servicios en diversas categorías.</p>
-
-    <p>Explora una amplia variedad de opciones, desde servicios profesionales hasta soluciones empresariales especializadas. Nuestra plataforma está diseñada para ofrecerte información actualizada, confiable y fácil de acceder. No importa si buscas proveedores locales o soluciones a nivel nacional, aquí encontrarás lo que necesitas.</p>
-
-    <p>Nuestro compromiso es ayudarte a tomar decisiones informadas al conectar con empresas y profesionales calificados. Cada proveedor ha sido evaluado para garantizar calidad y confianza. Además, puedes consultar reseñas y calificaciones de otros usuarios para tomar la mejor decisión.</p>
-
-    <p>Ya sea que necesites servicios de construcción, tecnología, consultoría o mantenimiento, nuestra plataforma facilita el proceso de búsqueda y contacto. ¡Empieza ahora y descubre todas las opciones disponibles!</p>
-
-    <!-- Botón que redirige a la página de proveedores -->
-    <a href="./views/proveedores.html" class="cta-button">Ver Proveedores</a>
+    <div class="content">
+      <h1 class="logo">
+        <img src="./images/logo.png" alt=""> <br />
+        <strong class="highlight">Lo resolvemos por ti.</strong>
+      </h1>
+      <p>
+        Explora una amplia variedad de opciones, desde servicios profesionales hasta soluciones empresariales especializadas. Nuestra plataforma está 
+        diseñada para ofrecerte información actualizada, confiable y fácil de acceder. No importa si buscas proveedores locales o soluciones a nivel 
+        nacional, aquí encontrarás lo que necesitas.
+      </p>
+      <div class="links">
+        <a href="./views/proveedores.html" class="link-primary">Estoy listo</a>
+      </div>
+    </div>
   </section>
-
-  <!-- Pie de página -->
-  <div id="footer-placeholder"></div>
-
-  <script>
-    // Cargar barra de navegación desde un archivo externo
-    fetch('./components/nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
-
-    // Cargar pie de página desde un archivo externo
-    fetch('./components/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
 </body>
 </html>
+

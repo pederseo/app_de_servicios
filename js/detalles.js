@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (proveedor) {
         document.getElementById("detalle").innerHTML = `
           <div class="detalle-card">
+          <div class="detalle-card-content">
             <img src="${proveedor.imagen}" alt="${proveedor.nombre}" />
+            <div class="detalle-text">
             <h2>${proveedor.nombre}</h2>
             <p>${proveedor.descripcion}</p>
             <p><strong>Calificación:</strong> ${proveedor.calificacion} ⭐ (${proveedor.reseñas} reseñas)</p>
@@ -40,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="detalle-botones">
               <a href="../views/proveedores.html" class="detalle-button">Volver</a>
               <a href="index.html" class="detalle-button">Contactar</a>
+              </div>
+              </div>
             </div>
           </div>
         `;

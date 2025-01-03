@@ -1,56 +1,76 @@
-      /* Estilos para la sección de detalles del proveedor */
-      .detalle-card {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        text-align: center;
-      }
+/* Estilo para la tarjeta de detalles */
+.detalle {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;     /* Centra el contenido verticalmente */
+}
+.detalle-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 80%;
+  max-height: 90%;
+}
 
-      .detalle-card img {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 15px;
-      }
+/* Contenedor de la imagen y el texto */
+.detalle-card-content {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+  justify-content: center;
 
-      .detalle-card h2 {
-        color: var(--color-primario);
-        margin-bottom: 10px;
-      }
+}
 
-      .detalle-card p {
-        font-size: var(--tamano-parrafo);
-        margin-bottom: 10px;
-      }
+/* Estilo de la imagen */
+.detalle-card img {
+  width: 50%; /* 40% del contenedor, puedes ajustar este valor */
+  max-height: 100%; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
 
-      .detalle-card a {
-        color: black;
-      }
+/* Contenedor de texto */
+.detalle-text {
+  flex: 1; /* Ocupa el espacio restante */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
 
-      /* Estilo para los botones */
-      .detalle-botones {
-        display: flex; /* Los alinea en fila */
-        justify-content: center; /* Centra horizontalmente */
-        gap: 10px; /* Espacio entre botones */
-      }
+.detalle-card h2 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
 
-      .detalle-button {
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: var(--tamano-parrafo);
-        color: white !important;
-        background-color: var(--color-primario);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        display: inline-block;
-      }
+.detalle-card p {
+  font-size: var(--tamano-parrafo);
+  margin-bottom: 10px;
+}
 
-      .detalle-button:hover {
-        background-color: var(--color-hover);
-      }
+.detalle-card a {
+  color: black;
+}
+
+/* Estilo para los botones */
+.detalle-botones {
+  display: flex;
+  justify-content: start; /* Alinea los botones a la izquierda */
+  gap: 10px;
+}
+
+.detalle-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: var(--tamano-parrafo);
+  color: white !important;
+  background-color: var(--color-primario);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.detalle-button:hover {
+  background-color: var(--color-hover);
+}

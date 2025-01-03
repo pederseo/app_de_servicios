@@ -7,11 +7,11 @@
 
 /* Variables Globales */
 :root {
-    --color-primario: #2c3e50;
+    --color-primario: #f43f5e;
     --color-secundario: #2ecc71;
     --color-texto: #333; 
-    --color-fondo: #f8f9fa; 
-    --color-hover: #2980b9;
+    --color-fondo: #ffffff; 
+    --color-hover: #e11d48;
   
     --fuente-principal: 'Poppins', sans-serif;
     --fuente-secundaria: 'Roboto', sans-serif;
@@ -28,6 +28,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   
   body {
     font-family: var(--fuente-principal);
@@ -61,7 +62,7 @@
   button {
     padding: 10px 20px;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
     background-color: var(--color-primario);
     color: white;
